@@ -20,7 +20,9 @@ Now [download](https://github.com/waynehoover/atotp/releases) and install the wo
 
 ## Usage
 
-In alfred just type `t` then start typing the name of your service. The TOTP code will be copied to clipboard by default and pasted to top most running app on option select.
+In alfred just type `t` then start typing the name of your service. 
+
+The TOTP code will be pasted to the top most app by default and copied to the clipboard on option return.
 
 ## Finding your totp codes
 On most websites you can login and see your totp code in the 2-factor setting page.
