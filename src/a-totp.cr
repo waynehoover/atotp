@@ -4,9 +4,10 @@ module ATotp
   VERSION = "0.1.0"
   ENV["PATH"] = "/usr/local/bin:/usr/bin"
 
-  # This could be cached.
+  # This could possibly be cached.
+  # 0..-2 because this always returns a newline at the end, giving an extra element without.
   def self.ids
-    `security dump-keychain atotp.keychain | grep 0x00000007 | awk -F= '{print $2}' | tr -d \'"'`.split("\n")
+    `security dump-keychain atotp.keychain | grep 0x00000007 | awk -F= '{print $2}' | tr -d \'"'`.split("\n")[0..-2]
   end
 
   def self.gen_code(pass)

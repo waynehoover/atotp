@@ -127,7 +127,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>See https://github.com/waynehoover/atotp/blob/master/README.md on how to get setup.</string>
 	<key>uidata</key>
 	<dict>
 		<key>777F9C20-6015-4667-983F-3DFE5DAD1A4C</key>
@@ -157,6 +157,6 @@
 	<key>version</key>
 	<string>0.1.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/waynehoover/atotp</string>
 </dict>
 </plist>
