@@ -5,9 +5,8 @@ module ATotp
   ENV["PATH"] = "/usr/local/bin:/usr/bin"
 
   # This could possibly be cached.
-  # 0..-2 because this always returns a newline at the end, giving an extra element without.
   def self.ids
-    `security dump-keychain atotp.keychain | grep 0x00000007 | awk -F= '{print $2}' | tr -d \'"'`.split("\n")[0..-2]
+    `security dump-keychain atotp.keychain | grep 0x00000007 | awk -F= '{print $2}' | tr -d \'"'`.strip.split("\n")
   end
 
   def self.gen_code(pass)
@@ -24,16 +23,24 @@ module ATotp
 
   def self.alfred_out
     ids.map do |id|
-      code = gen_code get_pass(id)
+      pass = get_pass id
+      code = gen_code pass
       {
         uid: id,
         title: id,
         subtitle: code,
-        arg: code
+        arg: pass,
+        mods: {
+          alt: {
+            valid: true,
+            subtitle: "copy #{code}",
+            arg: pass,
+          }
+        }
       }
     end
   end
 
-  print({ items: alfred_out }.to_json)
+  print({ rerun: 1, items: alfred_out }.to_json)
 end
 
