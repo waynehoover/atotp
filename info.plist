@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string></string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>777F9C20-6015-4667-983F-3DFE5DAD1A4C</key>
@@ -31,13 +33,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Wayne Hoover</string>
 	<key>description</key>
-	<string>Alfred TOTP</string>
+	<string>Get totp codes in Alfred in a secure way</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>atotp</string>
+	<string>ATotp</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -150,6 +152,10 @@
 			<integer>205</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
