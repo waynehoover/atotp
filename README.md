@@ -16,7 +16,7 @@ $ security -i
 > # repeat above command as needed, crtl-c to quit.
 ```
 
-Now download and install the worklow.
+Now [download](https://github.com/waynehoover/atotp/releases) and install the worklow.
 
 ## Usage
 
@@ -27,4 +27,4 @@ On most websites you can login and see your totp code in the 2-factor setting pa
 
 ## Thanks
 
-Thanks to https://www.aria.ai/blog/posts/storing-secrets-with-keychain.html for the code on how to list items from macOS keychain.
+Thanks to [aria.ia](https://www.aria.ai/blog/posts/storing-secrets-with-keychain.html) for the code on how to list items from macOS keychain.
